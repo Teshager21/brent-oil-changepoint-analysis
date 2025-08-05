@@ -9,7 +9,7 @@ CORS(app)
 
 # Register API Blueprints
 app.register_blueprint(prices_bp)
-app.register_blueprint(change_points_bp)
+app.register_blueprint(change_points_bp, url_prefix="/api")
 app.register_blueprint(events_bp, url_prefix="/api/events")
 
 if __name__ == "__main__":
