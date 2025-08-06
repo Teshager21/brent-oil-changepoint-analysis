@@ -24,7 +24,8 @@ ke_df = pd.DataFrame(
 @change_points_bp.route("/change-points", methods=["GET"])
 def get_change_points():
     # Load change points on every request
-    cp_df = pd.read_csv("data/processed/change_points.csv")
+    path2 = os.path.join(ROOT_DIR, "data", "processed", "change_points.csv")
+    cp_df = pd.read_csv(path2)
     cp_df["change_point_date"] = pd.to_datetime(cp_df["change_point_date"])
 
     def find_closest_event(cp_date, window=60):

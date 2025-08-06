@@ -6,8 +6,8 @@ changepoints = pd.to_datetime(
     ["2008-10-01", "2011-03-10", "2014-11-05", "2020-03-10", "2022-02-28"]
 )
 
-# Allowing a few days of tolerance (±15 days) for match
-tolerance = timedelta(days=15)
+# Allowing a few days of tolerance (±60 days) for match
+tolerance = timedelta(days=60)
 
 
 def match_event(date):
